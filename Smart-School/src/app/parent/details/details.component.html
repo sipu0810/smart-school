@@ -1,0 +1,141 @@
+<!-- <app-parent-portal></app-parent-portal> -->
+<!-- <div class="container">
+<div class="col-lg-3 col-md-6">
+    <div class="panel panel-yellow">
+      
+        <a href="javascript:void(0)" (click)="viewStudent()">
+            <div class="panel-footer" >
+                <span class="pull-left ">Student List </span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+
+<div class="contailer">
+<div class="row" *ngIf="studentviewForm">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-list fa-fw"></i> Student List</h3>
+                
+              </div>
+            <div class="panel-body">
+                  <app-studentview></app-studentview>
+            </div>
+        </div>
+    </div>
+</div>
+</div> -->
+
+<div class="container">
+    
+  <div class="panel-body">
+        <div class="table-responsive">
+    <table class="table  table-striped"  >
+      <!-- <tr>
+          <th>Id</th>
+        <th>Student Name</th>
+        <th>Father's Name</th>  
+        <th>Father's Mobile</th>  
+        <th>Class</th>  
+        <th>Gender</th>  
+        <th>Date of Birth</th>  
+        <th>Address</th>       
+                
+      </tr> -->
+      
+      <tr>
+          <td style="font-size: 20px;">ID</td>
+          
+          <td >
+            {{students.studentId}}
+          </td>
+      </tr>
+      <tr>
+        <td style="font-size: 20px;">Student Name</td>
+        
+        <td >
+          {{students.studentName}}
+        </td>
+    </tr> 
+     <tr>
+        <td style="font-size: 20px;">Father Name</td>
+        
+        <td >
+          {{students.fatherName}}
+        </td>
+    </tr > 
+     <tr>
+        <td style="font-size: 20px;"> Mobile</td>
+        
+        <td >
+          {{students.mobileNumber}}
+        </td>
+    </tr>  
+    <tr>
+        <td style="font-size: 20px;">Class</td>
+        
+        <td >
+          {{students.className}}
+        </td>
+    </tr> 
+     <tr>
+        <td style="font-size: 20px;">Gender</td>
+        
+        <td >
+          {{students.gender}}
+        </td>
+    </tr> 
+     <tr>
+        <td style="font-size: 20px;">Date of Birth</td>
+        
+        <td >
+          {{students.dateOfBirth}}
+        </td>
+    </tr>  
+    <tr>
+        <td style="font-size: 20px;">Address</td>
+        
+        <td >
+          {{students.address}}
+        </td>
+    </tr>
+
+      <!-- <tr *ngFor="let student of students">
+        <td >
+          {{student.id}}
+        </td>
+        <td>
+          {{student.sname}}
+        </td>
+        <td>
+          {{student.parentname}}
+        </td>
+        <td >
+          {{student.parentmob}}
+        </td>
+        <td >
+            {{student.className}}
+        </td>
+        <td >
+              {{student.gender}}
+        </td>
+        <td >
+                {{student.dob}}
+        </td>
+        <td >
+            {{student.address}}
+        </td>
+   
+        
+      </tr> -->
+    </table>
+    
+  </div>
+  </div>
+  </div>
+  
+  

@@ -1,0 +1,39 @@
+
+<!-- <app-teacher-portal></app-teacher-portal> -->
+<div class="container">
+    <div class="panel-body">
+        <div class="table-responsive">
+    <table class="table table-bordered table-striped" border="1px" align="center" >
+      <tr>
+          <th>Id</th>
+        <th>Subject</th>
+        <th>Homework</th>  
+        <th>Post Date </th>          
+        <th>Operation</th>        
+                
+      </tr>
+      <tr *ngFor="let works of homework">
+       <td>
+         {{works.homeworkId}}
+       </td>
+       
+       <td>
+         {{works.subject}}
+       </td>
+       <td>
+        {{works.homework}}
+      </td>
+       <td>
+         {{works.postDate}}
+       </td>
+       
+        
+    <td><button class="btn btn-danger" (click)="deletehomework(works.homeworkId)"  >Delete</button>
+            <!-- <button class="btn btn-primary" (click)="updateHomework(works)" >Edit</button> -->
+        </td>
+      </tr>
+    </table>
+    <button class="btn btn-primary" (click)="addHomework()">New Homework</button>
+  </div>
+  </div>
+</div>

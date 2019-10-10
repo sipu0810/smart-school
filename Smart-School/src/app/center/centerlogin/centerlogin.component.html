@@ -1,0 +1,45 @@
+<div class="container">
+			<div class="row main">
+				<div class="panel-heading">
+	               <div class="panel-title text-center">
+	               		<h1 >Teacher Login</h1>
+	               		<hr />
+	               	</div>
+	            </div> 
+				<div class="main-login main-center">
+					<form class="form-horizontal" id="loginform" >
+						
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">User Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Email" [(ngModel)]="username" required />
+								</div>
+							</div>
+						</div>
+
+					<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password" [(ngModel)]="password" required/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group ">
+              <button type="button" class="btn btn-primary btn-lg btn-block login-button" (click)="login()">Login</button>
+				  <!-- <a routerLink="/teacher" routerLinkActive="active" type="button" class="btn btn-info btn-block">Login</a> -->
+              <!-- <a routerLink="/studentregisteration" routerLinkActive="active" type="button" class="btn btn-info btn-block">Register</a> -->
+						</div>
+						<div class="login">
+				            <a href="#">Forgot Password</a>
+				         </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	
+		 <router-outlet></router-outlet>

@@ -1,0 +1,91 @@
+<!-- <app-teacher-portal></app-teacher-portal> -->
+<div class="container">
+    <!-- <div class='card-body'>
+        <div class='row'>
+        <div class='col-md-2'>Search by:</div>
+        <div class='col-md-4'>
+        <input type='text'
+        [(ngModel)]='listFilter' />
+        </div>
+        </div>
+        <div class='row'>
+        <div class='col-md-6'>
+        <h4>Searched by: {{listFilter}}</h4>
+        </div>
+        </div>-->
+    <div class="panel-body">
+      <div class="table-responsive">
+    <table class="table table-bordered table-striped" border="1px" align="center" >
+      <tr>
+          <th>Id</th>
+        <th>Student Name</th>
+        <th>Father's Name</th>  
+        <th>Father's Mobile</th>  
+        <th>Class</th>  
+        <th>Gender</th>  
+        <th>Date of Birth</th>  
+        <th>Address</th> 
+        <th>Operation</th> 
+         
+                
+      </tr>
+      <tr *ngFor="let student of students">
+        <td >
+          {{student.studentId}}
+        </td>
+        <td>
+          {{student.studentName}}
+        </td>
+        <td>
+          {{student.fatherName}}
+        </td>
+        <td >
+          {{student.mobileNumber}}
+        </td>
+        <td >
+            {{student.className}}
+        </td>
+        <td >
+              {{student.gender}}
+        </td>
+        <td >
+                {{student.dateOfBirth}}
+        </td>
+        <td >
+            {{student.address}}
+        </td>
+    <td><button class="btn btn-danger" (click)="deletestudent(student)"  >Delete</button>
+            <button class="btn btn-primary" (click)="updateStudent(student)">Edit</button>
+            <button class="btn btn-primary" (click)="addMarks(student)">Add Marks</button>
+        </td>
+      </tr>
+    </table>
+    <button class="btn btn-primary" (click)="newStudent()">New User</button>
+    <!-- <button class="btn btn-primary" (click)="searchStudent()">Search</button> -->
+  </div>
+  </div>
+
+  <div class="container">
+  <div class="" style="  right: 40%; position: fixed;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group" >
+        <label for="studentname">Search Student</label> <input type="text"
+          class="form-control" id="studentname" required [(ngModel)]="studentName"
+          name="studentname" placeholder="Enter Name">
+      </div>
+     
+      <div class="btn-group">
+        <button type="submit" class="btn btn-success">Search</button>
+      </div>
+      <ul>
+        <li *ngIf="student">
+          <h4>{{student.studentId}} - {{student.studentName}} </h4>
+        </li>
+      </ul>
+    </form>
+
+  </div>
+  
+</div>
+
+</div>

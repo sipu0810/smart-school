@@ -1,0 +1,45 @@
+<!-- <app-parent-portal></app-parent-portal> -->
+
+<div class="container">
+<br><br>
+<div class="col-lg-7" >
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title"><i class="fa fa-calendar fa-fw"></i><a data-toggle="timeTable" tagget="#timeTable"> Homework</a></h3>
+</div>
+<div class="panel-body" id="timeTable" >
+<div class="table-responsive" >
+<table class="table table-bordered table-hover table-striped" >
+<thead>
+<tr>
+
+<th>Subjects</th>
+<th>Homework</th>
+<th>Date</th>
+ 
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let homeworks of homework">
+<td>
+    {{homeworks.subjects}}
+</td>
+<td>
+    {{homeworks.homework}}
+</td>
+<td>
+    {{homeworks.postDate}}
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+<div class="text-right">
+
+</div>
+</div>
+</div>
+</div>
+</div>

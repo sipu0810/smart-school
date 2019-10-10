@@ -1,0 +1,36 @@
+
+<!-- <app-teacher-portal></app-teacher-portal> -->
+<div class="container">
+    <form (ngSubmit)="processHomeworkForm()">
+      <div class="form-group"  >
+        <label for="h_id">Homework Id</label>
+        <input type="text" name="h_id" class="form-control" placeholder="Auto Generated"   readonly/>
+      </div>
+    
+      <div class="form-group">
+        <label for="subject">Subject</label>
+            <select type="text" class="form-control" name="subject" #selectElem (change)="setSubject(selectElem.value)" [(ngModel)]="homework.subject" >
+           
+           <!-- <option value="Hello">Hello </option> -->
+              <option *ngFor="let list of subjectList" [value]="list.Name"  >
+                {{list.Name}}
+            </option>
+          </select>
+      </div>
+    
+      <div class="form-group">
+            <label for="work">Homework</label>
+            <input type="text" name="work" class="form-control" [(ngModel)]="homework.homework"/>
+      </div>
+    
+      <div class="form-group">
+        <label for="pdate">Date</label>
+        <input type="date" name="pdate" class="form-control" [(ngModel)]="homework.postdate"/>
+      </div>
+    
+     
+      <input type="submit" value="save" class="btn btn-success"/>
+    </form>	   
+    
+    </div>
+
